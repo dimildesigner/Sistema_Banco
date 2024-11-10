@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Segurança Bancário</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        .container {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        input {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        #resultado {
+            margin-top: 20px;
+            padding: 10px;
+            border-radius: 4px;
+        }
+        .sucesso {
+            background-color: #dff0d8;
+            color: #3c763d;
+            border: 1px solid #d6e9c6;
+        }
+        .erro {
+            background-color: #f2dede;
+            color: #a94442;
+            border: 1px solid #ebccd1;
+        }
+        .tabela-verdade {
+            margin-top: 20px;
+            border-collapse: collapse;
+            width: 100%;
+        }
+        .tabela-verdade th, .tabela-verdade td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: center;
+        }
+        .tabela-verdade th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Sistema de Segurança Bancário</h1>
+        
+        <div class="form-group">
+            <label for="nome">Nome de Usuário:</label>
+            <input type="text" id="nome" placeholder="Digite seu nome de usuário">
+        </div>
+        
+        <div class="form-group">
+            <label for="senha">Senha:</label>
+            <input type="password" id="senha" placeholder="Digite sua senha">
+        </div>
+        
+        <button onclick="verificarAcesso()">Verificar Acesso</button>
+        
+        <div id="resultado"></div>
+        
+        <h2>Tabela Verdade</h2>
+        <table class="tabela-verdade">
+            <tr>
+                <th>Nome Válido</th>
+                <th>Senha Correta</th>
+                <th>Resultado</th>
+            </tr>
+            <tr>
+                <td>Falso</td>
+                <td>Falso</td>
+                <td>Falso</td>
+            </tr>
+            <tr>
+                <td>Falso</td>
+                <td>Verdadeiro</td>
+                <td>Falso</td>
+            </tr>
+            <tr>
+                <td>Verdadeiro</td>
+                <td>Falso</td>
+                <td>Falso</td>
+            </tr>
+            <tr>
+                <td>Verdadeiro</td>
+                <td>Verdadeiro</td>
+                <td>Verdadeiro</td>
+            </tr>
+        </table>
+    </div>
+
+    <script src="js/app_banco.js"></script>
+</body>
+</html>
